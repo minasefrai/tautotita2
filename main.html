@@ -1,252 +1,128 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Δελτίο Ταυτότητας</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ελληνική Ταυτότητα</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
-
     body {
-      background-image: url("background.jpg"); /* Προσαρμόστε το μονοπάτι */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed; /* Το background δεν κουνιέται */
-      color: white;
-    }
-
-    .header {
-      background-color: #62A3DA; /* Όχι διάφανο */
-      padding: 20px;
+      font-family: 'Arial', sans-serif;
+      background-color: #f1f1f1;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      padding: 40px;
     }
-
-    .header div {
-      font-size: 1.5rem;
+    .id-card {
+      background: white;
+      width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 30px;
     }
-
-    .header .center {
-      font-size: 0.9rem;
-      font-weight: normal;
-    }
-
-    .section-top {
-      background-color: #62A3DA;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .info-block {
-      max-width: 68%;
-    }
-
-    .photo-block {
-      max-width: 30%;  
-	  display: flex;
-	  justify-content: flex-start; /* Η φωτογραφία θα πάει πιο αριστερά */
-	  position: relative;
-    }
-
-    .id-photo {
-	width: 115px;
-	height: auto;
-	border-radius: 8px;
-	margin-top: 40px; /* ↩️ εδώ ρύθμισε όσο θέλεις */
-	margin-left: -130px; 
-}
-
-    .row {
-      margin-bottom: 18px;
-    }
-
-    .label {
-      font-size: 0.85rem;
-      opacity: 0.85;
-    }
-
-    .value {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-      font-weight: normal;
-    }
-	.section-bottom {
-	background-image: url("background.jpg"); /* Προσαρμόστε το μονοπάτι */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed; /* Το background δεν κουνιέται */
-      color: white;
-	padding: 25px;
-	margin-top: -20px; /* ↩️ έτσι θα “ανεβεί” το μπλε σκούρο προς τα πάνω */
-	}
-
-
-    .divider {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      margin: 18px 0;
-    }
-
-    .button-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      justify-items: center;
-      margin: 10px 0 20px;
-    }
-
-    .button-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 0.75rem;
-      color: white;
-    }
-
-    .button-col img {
-      width: 12-px;
-      height: 38px;
-      margin-bottom: 5px;
-    }
-
-    .note {
-      font-size: 0.75rem;
+    .id-header {
       text-align: center;
-      opacity: 0.8;
-      margin-top: 20px;
-    }
-
-    .doc-code {
-      font-size: 0.65rem;
-      font-weight: normal;
-      text-align: center;
-      margin: 12px 0;
-      word-break: break-word;
-    }
-
-    .uppercase-label {
-      text-transform: uppercase;
       font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #003366;
     }
-
-    .uppercase-value {
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .label {
+      font-weight: bold;
+      color: #555;
+      width: 45%;
+    }
+    .value {
+      width: 45%;
+      color: #000;
+    }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 5px 0;
+    }
+    .uppercase-label, .uppercase-value {
       text-transform: uppercase;
-      font-weight: normal;
     }
   </style>
 </head>
 <body>
+  <div class="id-card">
+    <div class="id-header">ΕΛΛΗΝΙΚΗ ΔΗΜΟΚΡΑΤΙΑ - ΕΛΛΗΝΙΚΗ ΤΑΥΤΟΤΗΤΑ</div>
 
-  <div class="header">
-    <div>←</div>
-    <div class="center">Δελτίο Ταυτότητας</div>
-    <div>︙</div>
-  </div>
-
-  <div class="section-top">
-    <div class="info-block">
-      <div class="row">
-        <div class="label uppercase-label">ΑΡΙΘΜΟΣ ΤΑΥΤΟΤΗΤΑΣ:</div>
-        <div class="value uppercase-value">A0538064</div>
-      </div>
-      <div class="row">
-        <div class="label uppercase-label">ΗΜ. ΕΚΔΟΣΗΣ:</div>
-        <div class="value uppercase-value">02/10/2020</div>
-      </div>
-    </div>
-    <div class="photo-block">
-      <img src="https://raw.githubusercontent.com/minasefrai/tautotita/main/photo.jpg" alt="ID Photo" class="id-photo">
-    </div>
-  </div>
-
-  <div class="section-bottom">
-
-    <div class="button-row">
-      <div class="button-col">
-        <img src="https://raw.githubusercontent.com/minasefrai/tautotita/main/wallet.jpg" alt="Wallet">
-      </div>
-      <div class="button-col">
-        <img src="https://raw.githubusercontent.com/minasefrai/tautotita/main/copy.jpg" alt="Copy">
-      </div>
-      <div class="button-col">
-        <img src="https://raw.githubusercontent.com/minasefrai/tautotita/main/qr.jpg" alt="QR">
-      </div>
-      <div class="button-col">
-        <img src="https://raw.githubusercontent.com/minasefrai/tautotita/main/scan.jpg" alt="Scan">
+    <div class="section-top">
+      <div class="info-block">
+        <div class="row">
+          <div class="label uppercase-label">ΑΡΙΘΜΟΣ ΤΑΥΤΟΤΗΤΑΣ:</div>
+          <div class="value uppercase-value">ΑΟ 148864</div>
+        </div>
+        <div class="row">
+          <div class="label uppercase-label">ΗΜ. ΕΚΔΟΣΗΣ:</div>
+          <div class="value uppercase-value">29/01/2020</div>
+        </div>
       </div>
     </div>
 
     <div class="row">
       <div class="label">ΕΠΩΝΥΜΟ</div>
-      <div class="value">ΕΦΡΑΙΜΟΓΛΟΥ</div>
+      <div class="value">ΣΑΛΙΑΡΗΣ-ΦΑΣΣΕΑΣ</div>
       <div class="divider"></div>
       <div class="label">SURNAME</div>
-      <div class="value">EFRAIMOGLOU</div>
+      <div class="value">SALIARIS-FASSEAS</div>
     </div>
     <div class="divider"></div>
 
     <div class="row">
       <div class="label">ΟΝΟΜΑ</div>
-      <div class="value">ΜΗΝΑΣ</div>
+      <div class="value">ΑΓΙΣ</div>
       <div class="divider"></div>
       <div class="label">GIVEN NAME</div>
-      <div class="value">MINAS</div>
+      <div class="value">AGIS</div>
     </div>
     <div class="divider"></div>
 
     <div class="row">
       <div class="label">ΟΝΟΜΑ ΠΑΤΕΡΑ</div>
-      <div class="value">ΔΗΜΗΤΡΙΟΣ</div>
+      <div class="value">ΓΕΩΡΓΙΟΣ</div>
       <div class="divider"></div>
       <div class="label">FATHER'S NAME</div>
-      <div class="value">DIMITRIOS</div>
+      <div class="value">GEORGIOS</div>
     </div>
     <div class="divider"></div>
 
     <div class="row">
       <div class="label">ΟΝΟΜΑ ΜΗΤΕΡΑΣ</div>
-      <div class="value">ΑΓΝΗ</div>
+      <div class="value">ΣΟΦΙΑΝΟΠΟΥΛΟΥ</div>
     </div>
     <div class="divider"></div>
 
     <div class="row">
       <div class="label">ΗΜ. ΓΕΝΝΗΣΗΣ</div>
-      <div class="value">27/03/2007</div>
+      <div class="value">05/12/2007</div>
     </div>
     <div class="divider"></div>
 
     <div class="row">
       <div class="label">ΤΟΠΟΣ ΓΕΝΝΗΣΗΣ</div>
-      <div class="value">ΑΜΑΡΟΥΣΙΟΥ ΑΤΤΙΚΗΣ</div>
+      <div class="value">ΑΜΑΡΟΥΣΙΟ ΑΤΤΙΚΗΣ</div>
     </div>
     <div class="divider"></div>
 
     <div class="row">
       <div class="label">ΑΡΧΗ ΕΚΔΟΣΗΣ</div>
-      <div class="value">Τ.Α. ΦΙΛΟΘΕΗΣ</div>
+      <div class="value">Τ.Α. ΚΗΦΙΣΙΑΣ</div>
     </div>
-    <div class="divider"></div>
-
-    <div class="row">
-      <div class="doc-code">ΚΩΔΙΚΟΣ ΕΓΓΡΑΦΟΥ: w4PO8VAEzopT6AYF02d6...</div>
-    </div>
-
-    <p class="note">
-      Δεν αποτελεί διεθνές ταξιδιωτικό έγγραφο<br>
-      Not an international travel document
-    </p>
   </div>
-
 </body>
 </html>
