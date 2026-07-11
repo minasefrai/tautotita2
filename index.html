@@ -87,10 +87,23 @@
       font-size: 1.3rem;
       margin-bottom: 5px;
       font-weight: normal;
-    }
+	}
 	.section-bottom {
-	padding: 25px;
-	margin-top: -20px;
+	  position: relative;
+	  padding: 25px;
+	  margin-top: -20px;
+	  color: white;
+	}
+	
+	.section-bottom::before {
+	  content: "";
+	  position: absolute; /* Attaches to the section instead of the screen */
+	  inset: 0;
+	  background-image: url("background.jpg");
+	  background-size: cover;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  z-index: -1;
 	}
 
     .divider {
